@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import {ConfigModule} from "@nestjs/config";
 import {GraphQLModule} from "@nestjs/graphql"
 import path from "node:path"
+import {CustomersService} from "../services/customers.service"
 import { DatabaseModule } from 'src/database/database.module';
 import { ProductsService } from 'src/services/products.service';
 import { PurchasesService } from 'src/services/purchases.service';
@@ -19,10 +20,14 @@ import { PurchaseResolver } from './graphql/resolvers/purchases.resolver';
         })
     ],
     providers: [
+        //Resolvers
         ProductsResolver, 
         ProductsService,
+
+        // Servies
         PurchaseResolver,
-        PurchasesService
+        PurchasesService,
+        CustomersService
     ]
 })
 export class HttpModule {}
