@@ -23,12 +23,12 @@ import { MessagingModule } from 'src/messaging/messaging.module';
     ],
     providers: [
         //Resolvers
-        ProductsResolver, 
-        ProductsService,
+        ProductsResolver,         
+        PurchaseResolver,
         CustomersResolver,
 
         // Servies
-        PurchaseResolver,
+        ProductsService,
         PurchasesService,
         CustomersService
     ]

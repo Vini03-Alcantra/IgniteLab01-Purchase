@@ -67,7 +67,5 @@ export class PurchasesService {
         })
 
         return purchase
-
-        return purchase
     }
 }

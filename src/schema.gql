@@ -35,8 +35,8 @@ type Customer {
 
 type Query {
   products: [Product!]!
-  me: Customer!
   purchases: [Purchase!]!
+  me: Customer!
 }
 
 type Mutation {

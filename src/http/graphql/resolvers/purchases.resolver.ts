@@ -34,12 +34,11 @@ export class PurchaseResolver {
     async createPurchase(
         @Args('data') data: CreatePurchaseInput, 
         @CurrentUser() user: AuthUser
-    ) {
-        console.log(user)
+    ) {        
         let customer = await this.customersService.getCustomerByAuthUserid(
             user.sub
         );
-        console.log(customer)
+        
         if(!customer){
             customer = await this.customersService.createCustomer({
                 authUserId: user.sub
